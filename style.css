@@ -1,1 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --angelo: #10002bff;
+    --angelo-roxo: #240046ff;
+    --roxo: #3c096cff;
+    --pepsi: #5a189aff;
+    --twitch: #7b2cbfff;
+    --lavanderia: #9d4eddff;
+    --lavender-town: #c77dffff;
+    --mauve-down: #e0aaffff;
+    --title: "Playfair Display", serif;
+    --text: "Raleway", sans-serif;
+}
+
+.p {
+    font-family: var(--text);
+}
+
+.h1 {
+    font-family: var(--title);
+}
