@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simulacao</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <h1>O que é HTTP?</h1>
-    <h3>Macaco</h3>
-    <p>É um bagulho que você pede uma coisa e ele manda pro servidor.</p>
+    <main>
+        <div class="explicacao ativa" id="explicacao-0">
+            <h1>O que é HTTP?</h1>
+
+            <p>HTTP (Hypertext Transfer Protocol) é o protocolo de comunicação usado para transferir dados na web. Ele
+                permite que os navegadores solicitem e recebam páginas da internet.</p>
+            <button class="btn-proximo" data-proximo="1">Próximo</button>
+        </div>
+
+        <div class="explicacao" id="explicacao-1">
+            <h1>O que é HTTPS?</h1>
+
+            <p>HTTPS (Hypertext Transfer Protocol Secure) é uma versão segura do HTTP. Ele adiciona uma camada de
+                criptografia
+                para proteger a comunicação entre o navegador e o servidor, garantindo que os dados trocados sejam
+                privados e
+                íntegros.</p>
+            <button class="btn-proximo" data-proximo="2">Próximo</button>
+        </div>
+
+        <div class="explicacao" id="explicacao-2">
+            <h1>O que é cliente?</h1>
+            <p>O cliente é o software ou dispositivo que faz uma solicitação a um servidor. No contexto da web, o
+                cliente é
+                geralmente um navegador que solicita páginas da internet.</p>
+            <button class="btn-proximo" data-proximo="3">Próximo</button>
+        </div>
+
+        <div class="explicacao" id="explicacao-3">
+            <h1>O que é servidor?</h1>
+            <p>O servidor é o software ou dispositivo que responde às solicitações feitas por um cliente. Ele processa
+                as
+                solicitações e envia os dados solicitados de volta ao cliente.</p>
+            <button class="btn-proximo" data-proximo="4">Próximo</button>
+        </div>
+
+
+        <div class="explicacao" id="explicacao-4">
+            <h1>Simular Requisição HTTP</h1>
+
+            <form id="formRequisicao">
+
+                <label for="metodo">Método:</label>
+                <select id="metodo">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                </select>
+
+                <label for="url">URL:</label>
+                <input type="text" id="url" placeholder="https://meusite.com/produto">
+
+                <label for="parametros">Parâmetros:</label>
+                <input type="text" id="parametros" placeholder="id=10">
+
+                <button type="submit">Montar Requisição</button>
+
+            </form>
+
+            <h2>Requisição simulada:</h2>
+            <pre id="resultado"></pre>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
