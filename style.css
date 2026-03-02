@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --angelo: #10002bff;
-    --angelo-roxo: #240046ff;
+    --melissa: rgb(255, 255, 255);
+    --angelo-prime: rgb(0, 0, 0);
+    --angelo: rgb(5, 1, 14);
+    --angelo-roxo: rgb(27, 5, 48);
     --roxo: #3c096cff;
     --pepsi: #5a189aff;
     --twitch: #7b2cbfff;
@@ -24,4 +26,11 @@
 }
 .h1 {
     font-family: var(--title);
+}
+
+html {
+   color: var(--angelo);
+   background-color: var(--angelo-roxo);
+   border: 30px solid black;
+   width: calc(100% - 10px);
 }
