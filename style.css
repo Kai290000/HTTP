@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --melissa: rgb(255, 255, 255);
+    --melissa: rgb(235, 235, 235);
     --angelo-prime: rgb(0, 0, 0);
     --angelo: rgb(5, 1, 14);
     --angelo-roxo: rgb(27, 5, 48);
@@ -15,7 +15,7 @@
     --text: "Raleway", sans-serif;
 }
 .explicacao {
-    font-size: 20px;
+    font-size: 40px;
     display: none;
 }
 .explicacao.ativa {
@@ -29,8 +29,7 @@
 }
 
 html {
-   color: var(--angelo);
+   color: var(--melissa);
    background-color: var(--angelo-roxo);
-   border: 30px solid black;
-   width: calc(100% - 10px);
+   text-align: center;
 }
