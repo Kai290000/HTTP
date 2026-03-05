@@ -37,3 +37,16 @@ html {
    background-color: var(--angelo-roxo);
    text-align: center;
 }
+button {
+    font-size: 20px;
+    font-family: var(--text);
+    padding: 7px 30px;
+    background-color: var(--angelo-prime);
+    color: var(--melissa);
+    border: 1px solid var(--melissa);
+}
+button:hover {
+    background-color: var(--melissa);
+    color: var(--angelo-prime);
+    border: 1px solid var(--angelo-prime);
+}
