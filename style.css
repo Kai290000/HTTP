@@ -14,8 +14,12 @@
     --title: "Playfair Display", serif;
     --text: "Raleway", sans-serif;
 }
+.creditos {
+    font-size: 10px;
+    text-align: left;
+}
 .explicacao {
-    font-size: 40px;
+    font-size: 30px;
     display: none;
 }
 .explicacao.ativa {
