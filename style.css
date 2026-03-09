@@ -18,6 +18,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+img {
+    width: 70%;
+}
+
 body {
     background: radial-gradient(circle at top right, var(--angelo-roxo), #020617);
     color: var(--melissa);
@@ -123,7 +127,7 @@ pre {
     padding: 20px;
     border-radius: 12px;
     font-family: 'Courier New', monospace;
-    color: #4ade80; /* Verde terminal */
+    color: #4ade80; 
     text-align: left;
     width: 100%;
     margin: 20px 0;
