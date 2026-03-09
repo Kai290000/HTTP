@@ -1,52 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600&display=swap');
 
 :root {
-    --melissa: rgb(235, 235, 235);
-    --angelo-prime: rgb(0, 0, 0);
-    --angelo: rgb(5, 1, 14);
-    --angelo-roxo: rgb(27, 5, 48);
-    --roxo: #3c096cff;
-    --pepsi: #5a189aff;
-    --twitch: #7b2cbfff;
-    --lavanderia: #9d4eddff;
-    --lavender-town: #c77dffff;
-    --mauve-down: #e0aaffff;
-    --title: "Playfair Display", serif;
-    --text: "Raleway", sans-serif;
-}
-.creditos {
-    font-size: 10px;
-    text-align: left;
-}
-.explicacao {
-    font-size: 30px;
-    display: none;
-}
-.explicacao.ativa {
-    display: block;
-}
-.p {
-    font-family: var(--text);
-}
-.h1 {
-    font-family: var(--title);
+    --melissa: #f8fafc;
+    --angelo-prime: #0f172a;
+    --angelo-roxo: #1e1b4b;
+    --roxo-glow: #9d4edd;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+    --title-font: "Playfair Display", serif;
+    --body-font: "Raleway", sans-serif;
 }
 
-html {
-   color: var(--melissa);
-   background-color: var(--angelo-roxo);
-   text-align: center;
+/* Reset Profissional */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
-button {
-    font-size: 20px;
-    font-family: var(--text);
-    padding: 7px 30px;
-    background-color: var(--angelo-prime);
+
+body {
+    background: radial-gradient(circle at top right, var(--angelo-roxo), #020617);
     color: var(--melissa);
-    border: 1px solid var(--melissa);
+    font-family: var(--body-font);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
-button:hover {
-    background-color: var(--melissa);
+
+/* Container do Card */
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.explicacao {
+    display: none;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.explicacao.ativa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tipografia */
+ h1 {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, var(--roxo-glow));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+/* Botões Modernos */
+button {
+    all: unset; /* Reseta o padrão */
+    cursor: pointer;
+    background: var(--melissa);
     color: var(--angelo-prime);
-    border: 1px solid var(--angelo-prime);
+    padding: 14px 40px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(157, 78, 221, 0.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: var(--roxo-glow);
+    color: white;
+    box-shadow: 0 0 20px var(--roxo-glow);
+}
+
+/* Inputs e Forms (Onde estava o problema no vídeo) */
+#formRequisicao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+input, select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--roxo-glow);
+}
+
+/* Área de Resultado (Código) */
+pre {
+    background: #000;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: 'Courier New', monospace;
+    color: #4ade80; /* Verde terminal */
+    text-align: left;
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid #1e293b;
+}
+
+/* Créditos no cantinho */
+.creditos {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-top: 10px;
 }
