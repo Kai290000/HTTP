@@ -11,7 +11,6 @@
     --body-font: "Raleway", sans-serif;
 }
 
-/* Reset Profissional */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +29,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Container do Card */
 main {
     width: 100%;
     max-width: 800px;
@@ -60,7 +58,6 @@ main {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Tipografia */
  h1 {
     font-family: var(--title-font);
     font-size: 3rem;
@@ -80,9 +77,8 @@ p {
     margin-bottom: 2rem;
 }
 
-/* Botões Modernos */
 button {
-    all: unset; /* Reseta o padrão */
+    all: unset; 
     cursor: pointer;
     background: var(--melissa);
     color: var(--angelo-prime);
@@ -101,8 +97,7 @@ button:hover {
     box-shadow: 0 0 20px var(--roxo-glow);
 }
 
-/* Inputs e Forms (Onde estava o problema no vídeo) */
-#formRequisicao {
+formRequisicao {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -123,7 +118,6 @@ input:focus {
     border-color: var(--roxo-glow);
 }
 
-/* Área de Resultado (Código) */
 pre {
     background: #000;
     padding: 20px;
@@ -136,9 +130,47 @@ pre {
     border: 1px solid #1e293b;
 }
 
-/* Créditos no cantinho */
 .creditos {
     font-size: 0.8rem;
     opacity: 0.5;
     margin-top: 10px;
+}
+
+
+.explicacao {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    max-width: 850px; 
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.explicacao.ativa {
+    display: flex; 
+}
+
+.explicacao img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; 
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.explicacao img:hover {
+    transform: scale(1.02); 
+}
+
+.btn-proximo {
+    align-self: center;
 }
